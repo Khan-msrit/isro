@@ -1,0 +1,34 @@
+# version: "3.1"
+
+# rules:
+#   - rule: Ask for start time if not provided
+#     steps:
+#       - slot_was_set:
+#           - start_time: null
+#       - action: action_ask_start_time
+#       - action: action_listen
+#       - action: action_query_influxdb
+
+#   - rule: Ask for stop time if not provided
+#     steps:
+#       - slot_was_set:
+#           - stop_time: null
+#       - action: action_ask_stop_time
+#       - action: action_listen
+#       - action: action_query_influxdb
+
+#   - rule: Ask for measurement if not provided
+#     steps:
+#       - slot_was_set:
+#           - measurement: null
+#       - action: action_ask_measurement
+#       - action: action_listen
+#       - action: action_query_influxdb
+
+#   - rule: Ask for fields if not provided
+#     steps:
+#       - slot_was_set:
+#           - fields: null
+#       - action: action_ask_fields
+#       - action: action_listen
+#       - action: action_query_influxdb

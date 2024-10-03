@@ -1,0 +1,15 @@
+{
+  "battery voltage": "voltage",
+  "voltage": "voltage",
+  "pwrs0095": "voltage",
+  "volts": "voltage",
+  "cell voltage": "voltage",
+  "battery charge": "charge",
+  "charge": "charge",
+  "battery current": "charge",
+  "pwrs0089": "charge",
+  "amperes": "charge",
+  "current": "charge",
+  "pwrs0095_bat_vol_fine_sel_rt": "PWRS0095_BAT_VOL_FINE_SEL_RT",
+  "pwrs0089_bat_chrg_cur_tcr_sel_rt": "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT"
+}

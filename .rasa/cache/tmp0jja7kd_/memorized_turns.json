@@ -1,0 +1,11 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohOSM1OTs+OT8vLxWssLY2FgAw6h/7": "action_check_connection",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohOSM1OTs+OT8vLxWssJY44zC0EWFwLABACkJD": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fWJZalJieGp+ckVgEokqLioBytbWxAIWMJBI=": "action_calculate_charge_average",
+    "eJyVTdsJgDAMXKUDOIGriJQQghZrlDTtT+nuRix+69fdca+ptsHVU6h4QA0Hj64+xDPsNLouYkhKbNmcSCwT2KSanTYPhQQW8riC3JBFzGvfhhEi5gj61vvav6v5AjhWTZU=": "action_listen",
+    "eJwtytEJgDAMhOFVOoATdBWREOWQYk0ljQUp3d2Avt3H/XMfU+iXohFvlorE0L9Bwidi+JFTNYi3d4V6k8RpfteDuEF5B61sBn2olWzuMZYXq9Ikkg==": "action_calculate_average",
+    "eJyVjdEJgDAMRFfpAE7gKiIhliDF2EqaFqR0dwPqv/7d4x53U+uDa4dQBfQaUhxduwNE3Gl0D3DIStHckknMCdFQrc4bYCXBlWBBVZITamI17t+WPbIvjErvzs+T+QLErUvM": "action_listen"
+  }
+}

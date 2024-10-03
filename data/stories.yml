@@ -1,0 +1,53 @@
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+
+- story: check_connection_story
+  steps:
+  - intent: check_connection
+  - action: action_check_connection
+
+- story: ask_average_charge_current_story
+  steps:
+  - intent: ask_average_charge_current
+    entities:
+      - start_time: "2023-08-08T01:49:04.654Z"
+      - stop_time: "2023-08-08T07:59:59:602Z"
+  - action: action_calculate_charge_average
+
+
+- story: ask_average_battery_voltage_story
+  steps:
+  - intent: ask_average_battery_voltage
+    entities:
+      - start_time: "2023-08-08T01:49:28.205Z"
+      - stop_time: "2023-08-08T01:49:29:230Z"
+  - action: action_calculate_average

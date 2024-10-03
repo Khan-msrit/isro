@@ -1,0 +1,157 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: check_connection
+  examples: |
+    - check connection
+    - random two entries
+    - is influxdb connected?
+    - display any two entries from influxDB
+- intent: ask_average_battery_voltage
+  examples: |
+    - What is the average battery voltage?
+    - Can you give me the average of battery voltage?
+    - Tell me the average of PWRS0095_BAT_VOL_FINE_SEL_RT
+    - What is the average of PWRS0095_BAT_VOL_FINE_SEL_RT?
+    - Can you give me the average of [PWRS0095_BAT_VOL_FINE_SEL_RT](battery_voltage)?
+    - Calculate the average voltage from the data.
+    - I need the average [battery voltage](battery_voltage)
+    - What is the average battery voltage between [start time:2023-08-08T01:49:04.654Z](start_time) and [stop time: 2023-08-08T07:59:59:602Z](stop_time)?
+    - Can you calculate the average voltage from [start time:2023-07-15T10:00.00Z](start_time) to [stop time: 2023-07-15T14:00:00Z](stop_time)?
+    - Show me the average voltage between [start time:2023-09-01T00:00.00Z](start_time) and [stop time: 2023-09-01T12:00:00Z](stop_time)
+    - Find the average voltage from [start time:2023-06-01T00:00.00Z](start_time) to [stop time: 2023-06-01T08:00:00Z](stop_time)
+    - What is the voltage average between [start time:2023-07-01T01:00.00Z](start_time) and [stop time: 2023-07-01T07:00:00Z](stop_time)?
+    - What is the average battery voltage between [start time:2023-08-08T01:49:28.205Z](start_time) and [stop time: 2023-08-08T01:49:29:230Z](stop_time)?
+    - Show me the voltage data from [start time:2023-08-08T01:49.04Z](start_time) to [stop time: 2023-08-08T07:59:59Z](stop_time)
+    - I need the voltage between [start time:2023-09-01T12:00.00Z](start_time) and [stop time: 2023-09-01T14:00:00Z](stop_time).
+    - What is the average battery voltage between [start time:2023-08-08T01:49:28.205Z](start_time) and [stop time: 2023-08-08T01:49:55:342Z](stop_time)?
+    - Calculate average voltage from [start time:2023-09-01T12:00.00Z](start_time) to [stop time: 2023-09-01T14:00:00Z](stop_time).
+    - Show the battery voltage from [start time:2023-07-08T10:00.00Z](start_time) to [stop time: 2023-07-08T11:00:00Z](stop_time).
+    - Calculate the average voltage from [start time:2023-08-08T01:00.00Z](start_time) to [stop time: 2023-08-08T02:00:00Z](stop_time).
+    - I need the average battery voltage from [start time:2023-08-09T00:00.00Z](start_time) to [stop time: 2023-08-09T06:00:00Z](stop_time).
+    - Tell me the average battery voltage from [start time:2023-07-15T10:00.00Z](start_time) to [stop time: 2023-07-15T12:00:00Z](stop_time).
+    - What is the average battery voltage between [2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T01:49:55:342Z](stop_time)?
+    
+- intent: ask_average_charge_current
+  examples: |
+    - What is the average charge current?
+    - Can you calculate the average charge current?
+    - Show me the average of PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT
+    - Can you give me the average of [PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT](battery_charge)?
+    - Calculate the average voltage from the data.
+    - I need the average [battery charge](battery_charge)
+    - What is the average battery charge current between [start time:2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)?
+    - Can you calculate the average charge current from [start time:2023-09-01T00:00.00Z](start_time) to [2023-09-01T12:00:00Z](stop_time)?
+    - Show me the average charging current between [start time:2023-07-01T01:00.00Z](start_time) and [2023-07-01T07:00:00Z](stop_time)
+    - Find the average charge current from [start time:2023-06-01T00:00.00Z](start_time) to [2023-06-01T08:00:00Z](stop_time)
+    - What is the average charging current between [start time:2023-07-01T10:00.00Z](start_time) and [2023-07-01T18:00:00Z](stop_time)?
+    - What is the average battery charge between [start time:2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T01:49:29:230Z](stop_time)?
+    - Show me the battery charge data from [start time:2023-08-08T01:49.04Z](start_time) to [2023-08-08T07:59:59Z](stop_time)
+    - I need the charge between [start time:2023-09-01T12:00.00Z](start_time) and [2023-09-01T14:00.00Z](stop_time).
+    - What is the battery charge between [start time:2023-08-09T08:00.00Z](start_time) and [2023-08-09T09:00:00Z](stop_time)?
+    - I need charge data from [start time:2023-06-01T11:00.00Z](start_time) to [2023-06-01T12:30:00Z](stop_time).
+    - Calculate the average voltage from [start time:2023-08-08T01:00.00Z](start_time) to [2023-08-08T02:00:00Z](stop_time).
+    - I need the average battery charge from [start time:2023-08-09T00:00.00Z](start_time) to [2023-08-09T06:00:00Z](stop_time).
+    - Tell me the average battery charge from [start time:2023-07-15T10:00.00Z](start_time) to [2023-07-15T12:00:00Z](stop_time).
+
+- synonym: voltage
+  examples: |
+    - battery voltage
+    - PWRS0095
+    - volts
+    - Cell Voltage
+- synonym: charge
+  examples: |
+    - battery charge
+    - battery current
+    - PWRS0089
+    - amperes
+    - Current
+    - charge
+- regex: start_time
+  examples: |
+    - [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z
+- regex: stop_time
+  examples: |
+    - [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\:[0-9]{3}Z

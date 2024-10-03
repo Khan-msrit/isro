@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-battery_charge",
+      "2": "I-battery_charge",
+      "3": "L-battery_charge",
+      "4": "U-battery_charge",
+      "5": "B-battery_voltage",
+      "6": "I-battery_voltage",
+      "7": "L-battery_voltage",
+      "8": "U-battery_voltage",
+      "9": "B-start_time",
+      "10": "I-start_time",
+      "11": "L-start_time",
+      "12": "U-start_time",
+      "13": "B-stop_time",
+      "14": "I-stop_time",
+      "15": "L-stop_time",
+      "16": "U-stop_time",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-battery_charge": 1,
+      "I-battery_charge": 2,
+      "L-battery_charge": 3,
+      "U-battery_charge": 4,
+      "B-battery_voltage": 5,
+      "I-battery_voltage": 6,
+      "L-battery_voltage": 7,
+      "U-battery_voltage": 8,
+      "B-start_time": 9,
+      "I-start_time": 10,
+      "L-start_time": 11,
+      "U-start_time": 12,
+      "B-stop_time": 13,
+      "I-stop_time": 14,
+      "L-stop_time": 15,
+      "U-stop_time": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
