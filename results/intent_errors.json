@@ -1,0 +1,10 @@
+[
+  {
+    "text": "Calculate the average voltage from the data.",
+    "intent": "ask_average_battery_voltage",
+    "intent_prediction": {
+      "name": "ask_average_charge_current",
+      "confidence": 0.718119740486145
+    }
+  }
+]

@@ -1,0 +1,2398 @@
+[
+  {
+    "text": "Can you give me the average of PWRS0095_BAT_VOL_FINE_SEL_RT?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 59,
+        "value": "PWRS0095_BAT_VOL_FINE_SEL_RT",
+        "entity": "battery_voltage"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I need the average battery voltage",
+    "entities": [
+      {
+        "start": 19,
+        "end": 34,
+        "value": "battery voltage",
+        "entity": "battery_voltage"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is the average battery voltage between start time:2023-08-08T01:49:04.654Z and stop time: 2023-08-08T07:59:59:602Z?",
+    "entities": [
+      {
+        "start": 44,
+        "end": 79,
+        "value": "start time:2023-08-08T01:49:04.654Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 84,
+        "end": 119,
+        "value": "stop time: 2023-08-08T07:59:59:602Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 44,
+        "end": 79,
+        "confidence_entity": 0.9936467409133911,
+        "value": "start time:2023-08-08T01:49:04.654Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 84,
+        "end": 93,
+        "confidence_entity": 0.9974580407142639,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 95,
+        "end": 119,
+        "confidence_entity": 0.8105397820472717,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 55,
+        "end": 79,
+        "value": "2023-08-08T01:49:04.654Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 95,
+        "end": 119,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you calculate the average voltage from start time:2023-07-15T10:00.00Z to stop time: 2023-07-15T14:00:00Z?",
+    "entities": [
+      {
+        "start": 43,
+        "end": 74,
+        "value": "start time:2023-07-15T10:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 78,
+        "end": 109,
+        "value": "stop time: 2023-07-15T14:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 43,
+        "end": 74,
+        "confidence_entity": 0.9987995624542236,
+        "value": "start time:2023-07-15T10:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 78,
+        "end": 87,
+        "confidence_entity": 0.9982864260673523,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 89,
+        "end": 109,
+        "confidence_entity": 0.9708037972450256,
+        "value": "2023-07-15T14:00:00Z",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Show me the average voltage between start time:2023-09-01T00:00.00Z and stop time: 2023-09-01T12:00:00Z",
+    "entities": [
+      {
+        "start": 36,
+        "end": 67,
+        "value": "start time:2023-09-01T00:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 72,
+        "end": 103,
+        "value": "stop time: 2023-09-01T12:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 36,
+        "end": 67,
+        "confidence_entity": 0.9993627667427063,
+        "value": "start time:2023-09-01T00:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 72,
+        "end": 81,
+        "confidence_entity": 0.9972772002220154,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 83,
+        "end": 103,
+        "confidence_entity": 0.6081337332725525,
+        "value": "2023-09-01T12:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Find the average voltage from start time:2023-06-01T00:00.00Z to stop time: 2023-06-01T08:00:00Z",
+    "entities": [
+      {
+        "start": 30,
+        "end": 61,
+        "value": "start time:2023-06-01T00:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 65,
+        "end": 96,
+        "value": "stop time: 2023-06-01T08:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 30,
+        "end": 61,
+        "confidence_entity": 0.9993489384651184,
+        "value": "start time:2023-06-01T00:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 65,
+        "end": 74,
+        "confidence_entity": 0.9984585046768188,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 76,
+        "end": 96,
+        "confidence_entity": 0.7144485712051392,
+        "value": "2023-06-01T08:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the voltage average between start time:2023-07-01T01:00.00Z and stop time: 2023-07-01T07:00:00Z?",
+    "entities": [
+      {
+        "start": 36,
+        "end": 67,
+        "value": "start time:2023-07-01T01:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 72,
+        "end": 103,
+        "value": "stop time: 2023-07-01T07:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 36,
+        "end": 67,
+        "confidence_entity": 0.9993664622306824,
+        "value": "start time:2023-07-01T01:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 72,
+        "end": 81,
+        "confidence_entity": 0.9982230067253113,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 83,
+        "end": 103,
+        "confidence_entity": 0.656153678894043,
+        "value": "2023-07-01T07:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the average battery voltage between start time:2023-08-08T01:49:28.205Z and stop time: 2023-08-08T01:49:29:230Z?",
+    "entities": [
+      {
+        "start": 44,
+        "end": 79,
+        "value": "start time:2023-08-08T01:49:28.205Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 84,
+        "end": 119,
+        "value": "stop time: 2023-08-08T01:49:29:230Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 44,
+        "end": 79,
+        "confidence_entity": 0.9942598342895508,
+        "value": "start time:2023-08-08T01:49:28.205Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 84,
+        "end": 93,
+        "confidence_entity": 0.9980288147926331,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 95,
+        "end": 119,
+        "confidence_entity": 0.5824596285820007,
+        "value": "2023-08-08T01:49:29:230Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 55,
+        "end": 79,
+        "value": "2023-08-08T01:49:28.205Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 95,
+        "end": 119,
+        "value": "2023-08-08T01:49:29:230Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Show me the voltage data from start time:2023-08-08T01:49.04Z to stop time: 2023-08-08T07:59:59Z",
+    "entities": [
+      {
+        "start": 30,
+        "end": 61,
+        "value": "start time:2023-08-08T01:49.04Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 65,
+        "end": 96,
+        "value": "stop time: 2023-08-08T07:59:59Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 30,
+        "end": 61,
+        "confidence_entity": 0.9993647933006287,
+        "value": "start time:2023-08-08T01:49.04Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 65,
+        "end": 74,
+        "confidence_entity": 0.9983246922492981,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 76,
+        "end": 96,
+        "confidence_entity": 0.7015143632888794,
+        "value": "2023-08-08T07:59:59Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need the voltage between start time:2023-09-01T12:00.00Z and stop time: 2023-09-01T14:00:00Z.",
+    "entities": [
+      {
+        "start": 27,
+        "end": 58,
+        "value": "start time:2023-09-01T12:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 63,
+        "end": 94,
+        "value": "stop time: 2023-09-01T14:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 27,
+        "end": 58,
+        "confidence_entity": 0.9988443851470947,
+        "value": "start time:2023-09-01T12:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 63,
+        "end": 72,
+        "confidence_entity": 0.9983962178230286,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 74,
+        "end": 94,
+        "confidence_entity": 0.8820785880088806,
+        "value": "2023-09-01T14:00:00Z",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is the average battery voltage between start time:2023-08-08T01:49:28.205Z and stop time: 2023-08-08T01:49:55:342Z?",
+    "entities": [
+      {
+        "start": 44,
+        "end": 79,
+        "value": "start time:2023-08-08T01:49:28.205Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 84,
+        "end": 119,
+        "value": "stop time: 2023-08-08T01:49:55:342Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 44,
+        "end": 79,
+        "confidence_entity": 0.9942371845245361,
+        "value": "start time:2023-08-08T01:49:28.205Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 84,
+        "end": 93,
+        "confidence_entity": 0.9982271790504456,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 95,
+        "end": 119,
+        "confidence_entity": 0.6505886912345886,
+        "value": "2023-08-08T01:49:55:342Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 55,
+        "end": 79,
+        "value": "2023-08-08T01:49:28.205Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 95,
+        "end": 119,
+        "value": "2023-08-08T01:49:55:342Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Calculate average voltage from start time:2023-09-01T12:00.00Z to stop time: 2023-09-01T14:00:00Z.",
+    "entities": [
+      {
+        "start": 31,
+        "end": 62,
+        "value": "start time:2023-09-01T12:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 66,
+        "end": 97,
+        "value": "stop time: 2023-09-01T14:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 31,
+        "end": 62,
+        "confidence_entity": 0.9988730549812317,
+        "value": "start time:2023-09-01T12:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 66,
+        "end": 75,
+        "confidence_entity": 0.998289167881012,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 77,
+        "end": 97,
+        "confidence_entity": 0.8767890930175781,
+        "value": "2023-09-01T14:00:00Z",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Show the battery voltage from start time:2023-07-08T10:00.00Z to stop time: 2023-07-08T11:00:00Z.",
+    "entities": [
+      {
+        "start": 30,
+        "end": 61,
+        "value": "start time:2023-07-08T10:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 65,
+        "end": 96,
+        "value": "stop time: 2023-07-08T11:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 30,
+        "end": 61,
+        "confidence_entity": 0.9993676543235779,
+        "value": "start time:2023-07-08T10:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 65,
+        "end": 74,
+        "confidence_entity": 0.9982158541679382,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 76,
+        "end": 96,
+        "confidence_entity": 0.912999153137207,
+        "value": "2023-07-08T11:00:00Z",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Calculate the average voltage from start time:2023-08-08T01:00.00Z to stop time: 2023-08-08T02:00:00Z.",
+    "entities": [
+      {
+        "start": 35,
+        "end": 66,
+        "value": "start time:2023-08-08T01:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 70,
+        "end": 101,
+        "value": "stop time: 2023-08-08T02:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 35,
+        "end": 66,
+        "confidence_entity": 0.9993632435798645,
+        "value": "start time:2023-08-08T01:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 70,
+        "end": 79,
+        "confidence_entity": 0.9983148574829102,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 81,
+        "end": 101,
+        "confidence_entity": 0.5831837058067322,
+        "value": "2023-08-08T02:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need the average battery voltage from 2023-08-09T00:00.00Z to stop time: 2023-08-09T06:00:00Z.",
+    "entities": [
+      {
+        "start": 40,
+        "end": 60,
+        "value": "2023-08-09T00:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 64,
+        "end": 95,
+        "value": "stop time: 2023-08-09T06:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 40,
+        "end": 60,
+        "confidence_entity": 0.9909372925758362,
+        "value": "2023-08-09T00:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 64,
+        "end": 73,
+        "confidence_entity": 0.9987322688102722,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 75,
+        "end": 95,
+        "confidence_entity": 0.6756551265716553,
+        "value": "2023-08-09T06:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me the average battery voltage from 2023-07-15T10:00.00Z to stop time: 2023-07-15T12:00:00Z.",
+    "entities": [
+      {
+        "start": 41,
+        "end": 61,
+        "value": "2023-07-15T10:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 65,
+        "end": 96,
+        "value": "stop time: 2023-07-15T12:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 41,
+        "end": 61,
+        "confidence_entity": 0.9968878626823425,
+        "value": "2023-07-15T10:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 65,
+        "end": 74,
+        "confidence_entity": 0.9986522793769836,
+        "value": "stop time",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "stop_time",
+        "start": 76,
+        "end": 96,
+        "confidence_entity": 0.7295692563056946,
+        "value": "2023-07-15T12:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you give me the average of PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 63,
+        "value": "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT",
+        "entity": "battery_charge"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_charge",
+        "start": 31,
+        "end": 63,
+        "confidence_entity": 0.6985508799552917,
+        "value": "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need the average battery charge",
+    "entities": [
+      {
+        "start": 19,
+        "end": 33,
+        "value": "battery charge",
+        "entity": "battery_charge"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_charge",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.5144273042678833,
+        "value": "charge",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the average battery charge current between start time:2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59:602Z?",
+    "entities": [
+      {
+        "start": 51,
+        "end": 86,
+        "value": "start time:2023-08-08T01:49:04.654Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 91,
+        "end": 115,
+        "value": "2023-08-08T07:59:59:602Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 51,
+        "end": 86,
+        "confidence_entity": 0.9934859871864319,
+        "value": "start time:2023-08-08T01:49:04.654Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 91,
+        "end": 115,
+        "confidence_entity": 0.881656289100647,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 62,
+        "end": 86,
+        "value": "2023-08-08T01:49:04.654Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 91,
+        "end": 115,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you calculate the average charge current from start time:2023-09-01T00:00.00Z to 2023-09-01T12:00:00Z?",
+    "entities": [
+      {
+        "start": 50,
+        "end": 81,
+        "value": "start time:2023-09-01T00:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 85,
+        "end": 105,
+        "value": "2023-09-01T12:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 50,
+        "end": 81,
+        "confidence_entity": 0.9993688464164734,
+        "value": "start time:2023-09-01T00:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 85,
+        "end": 105,
+        "confidence_entity": 0.7340967655181885,
+        "value": "2023-09-01T12:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me the average charging current between start time:2023-07-01T01:00.00Z and 2023-07-01T07:00:00Z",
+    "entities": [
+      {
+        "start": 45,
+        "end": 76,
+        "value": "start time:2023-07-01T01:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 81,
+        "end": 101,
+        "value": "2023-07-01T07:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 45,
+        "end": 76,
+        "confidence_entity": 0.9993832111358643,
+        "value": "start time:2023-07-01T01:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 81,
+        "end": 101,
+        "confidence_entity": 0.5032530426979065,
+        "value": "2023-07-01T07:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Find the average charge current from start time:2023-06-01T00:00.00Z to 2023-06-01T08:00:00Z",
+    "entities": [
+      {
+        "start": 37,
+        "end": 68,
+        "value": "start time:2023-06-01T00:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 72,
+        "end": 92,
+        "value": "2023-06-01T08:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 37,
+        "end": 68,
+        "confidence_entity": 0.999366819858551,
+        "value": "start time:2023-06-01T00:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 72,
+        "end": 92,
+        "confidence_entity": 0.5583462119102478,
+        "value": "2023-06-01T08:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the average charging current between start time:2023-07-01T10:00.00Z and 2023-07-01T18:00:00Z?",
+    "entities": [
+      {
+        "start": 45,
+        "end": 76,
+        "value": "start time:2023-07-01T10:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 81,
+        "end": 101,
+        "value": "2023-07-01T18:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 45,
+        "end": 76,
+        "confidence_entity": 0.9985886216163635,
+        "value": "start time:2023-07-01T10:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 81,
+        "end": 101,
+        "confidence_entity": 0.9734207391738892,
+        "value": "2023-07-01T18:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the average battery charge between start time:2023-08-08T01:49:28.205Z and 2023-08-08T01:49:29:230Z?",
+    "entities": [
+      {
+        "start": 43,
+        "end": 78,
+        "value": "start time:2023-08-08T01:49:28.205Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 83,
+        "end": 107,
+        "value": "2023-08-08T01:49:29:230Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 43,
+        "end": 78,
+        "confidence_entity": 0.9942014813423157,
+        "value": "start time:2023-08-08T01:49:28.205Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 83,
+        "end": 107,
+        "confidence_entity": 0.5802634954452515,
+        "value": "2023-08-08T01:49:29:230Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 54,
+        "end": 78,
+        "value": "2023-08-08T01:49:28.205Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 83,
+        "end": 107,
+        "value": "2023-08-08T01:49:29:230Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Show me the battery charge data from start time:2023-08-08T01:49.04Z to 2023-08-08T07:59:59Z",
+    "entities": [
+      {
+        "start": 37,
+        "end": 68,
+        "value": "start time:2023-08-08T01:49.04Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 72,
+        "end": 92,
+        "value": "2023-08-08T07:59:59Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 37,
+        "end": 68,
+        "confidence_entity": 0.999388575553894,
+        "value": "start time:2023-08-08T01:49.04Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 72,
+        "end": 92,
+        "confidence_entity": 0.5597346425056458,
+        "value": "2023-08-08T07:59:59Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need the charge between start time:2023-09-01T12:00.00Z and 2023-09-01T14:00.00Z.",
+    "entities": [
+      {
+        "start": 26,
+        "end": 57,
+        "value": "start time:2023-09-01T12:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 62,
+        "end": 82,
+        "value": "2023-09-01T14:00.00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 26,
+        "end": 57,
+        "confidence_entity": 0.9988182187080383,
+        "value": "start time:2023-09-01T12:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 62,
+        "end": 82,
+        "confidence_entity": 0.8002312183380127,
+        "value": "2023-09-01T14:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the battery charge between start time:2023-08-09T08:00.00Z and 2023-08-09T09:00:00Z?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 66,
+        "value": "start time:2023-08-09T08:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 71,
+        "end": 91,
+        "value": "2023-08-09T09:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 35,
+        "end": 66,
+        "confidence_entity": 0.9991349577903748,
+        "value": "start time:2023-08-09T08:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 71,
+        "end": 91,
+        "confidence_entity": 0.966812789440155,
+        "value": "2023-08-09T09:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need charge data from start time:2023-06-01T11:00.00Z to 2023-06-01T12:30:00Z.",
+    "entities": [
+      {
+        "start": 24,
+        "end": 55,
+        "value": "start time:2023-06-01T11:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 59,
+        "end": 79,
+        "value": "2023-06-01T12:30:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 24,
+        "end": 55,
+        "confidence_entity": 0.9981385469436646,
+        "value": "start time:2023-06-01T11:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 59,
+        "end": 79,
+        "confidence_entity": 0.7832767367362976,
+        "value": "2023-06-01T12:30:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Calculate the average voltage from start time:2023-08-08T01:00.00Z to 2023-08-08T02:00:00Z.",
+    "entities": [
+      {
+        "start": 35,
+        "end": 66,
+        "value": "start time:2023-08-08T01:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 70,
+        "end": 90,
+        "value": "2023-08-08T02:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 35,
+        "end": 66,
+        "confidence_entity": 0.9993727803230286,
+        "value": "start time:2023-08-08T01:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 70,
+        "end": 90,
+        "confidence_entity": 0.5880448222160339,
+        "value": "2023-08-08T02:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need the average battery charge from start time:2023-08-09T00:00.00Z to 2023-08-09T06:00:00Z.",
+    "entities": [
+      {
+        "start": 39,
+        "end": 70,
+        "value": "start time:2023-08-09T00:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 74,
+        "end": 94,
+        "value": "2023-08-09T06:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 39,
+        "end": 70,
+        "confidence_entity": 0.9992157220840454,
+        "value": "start time:2023-08-09T00:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 74,
+        "end": 94,
+        "confidence_entity": 0.5332247018814087,
+        "value": "2023-08-09T06:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Tell me the average battery charge from start time:2023-07-15T10:00.00Z to 2023-07-15T12:00:00Z.",
+    "entities": [
+      {
+        "start": 40,
+        "end": 71,
+        "value": "start time:2023-07-15T10:00.00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 75,
+        "end": 95,
+        "value": "2023-07-15T12:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 40,
+        "end": 71,
+        "confidence_entity": 0.9987986087799072,
+        "value": "start time:2023-07-15T10:00.00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 75,
+        "end": 95,
+        "confidence_entity": 0.5927968621253967,
+        "value": "2023-07-15T12:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the battery voltage(battery_voltage) when frame ID is 5?",
+    "entities": [
+      {
+        "start": 62,
+        "end": 63,
+        "value": "5",
+        "entity": "frame_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 62,
+        "end": 63,
+        "confidence_entity": 0.745739221572876,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me the battery charge(battery_charge) where frame ID is 7.",
+    "entities": [
+      {
+        "start": 61,
+        "end": 62,
+        "value": "7",
+        "entity": "frame_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 61,
+        "end": 62,
+        "confidence_entity": 0.7326480746269226,
+        "value": "7",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the battery charge when the battery voltage is 39?",
+    "entities": [
+      {
+        "start": 55,
+        "end": 57,
+        "value": "39",
+        "entity": "battery_voltage"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 55,
+        "end": 57,
+        "confidence_entity": 0.7553717494010925,
+        "value": "39",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Give me the battery charge for battery voltage 42.5.",
+    "entities": [
+      {
+        "start": 47,
+        "end": 51,
+        "value": "42.5",
+        "entity": "battery_voltage"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_voltage",
+        "start": 47,
+        "end": 51,
+        "confidence_entity": 0.698736310005188,
+        "value": "42.5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What's the battery charge when the voltage is 40.3?",
+    "entities": [
+      {
+        "start": 46,
+        "end": 50,
+        "value": "40.3",
+        "entity": "battery_voltage"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_voltage",
+        "start": 46,
+        "end": 50,
+        "confidence_entity": 0.7029435038566589,
+        "value": "40.3",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me the charge when the battery voltage is 38.6.",
+    "entities": [
+      {
+        "start": 47,
+        "end": 51,
+        "value": "38.6",
+        "entity": "battery_voltage"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_voltage",
+        "start": 47,
+        "end": 51,
+        "confidence_entity": 0.7024016380310059,
+        "value": "38.6",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the logic status when the battery charge is 0.5?",
+    "entities": [
+      {
+        "start": 52,
+        "end": 55,
+        "value": "0.5",
+        "entity": "battery_charge"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_voltage",
+        "start": 52,
+        "end": 55,
+        "confidence_entity": 0.6973134875297546,
+        "value": "0.5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you tell me the logic status for battery charge 0.9?",
+    "entities": [
+      {
+        "start": 52,
+        "end": 55,
+        "value": "0.9",
+        "entity": "battery_charge"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_voltage",
+        "start": 52,
+        "end": 55,
+        "confidence_entity": 0.6963051557540894,
+        "value": "0.9",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the logic status when the battery charge is -0.18?",
+    "entities": [
+      {
+        "start": 52,
+        "end": 57,
+        "value": "-0.18",
+        "entity": "battery_charge"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_charge",
+        "start": 52,
+        "end": 57,
+        "confidence_entity": 0.8927896022796631,
+        "value": "-0.18",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me the battery voltage from 2023-09-01T10:00:00Z to 2023-09-01T11:00:00Z.",
+    "entities": [
+      {
+        "start": 33,
+        "end": 53,
+        "value": "2023-09-01T10:00:00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 57,
+        "end": 77,
+        "value": "2023-09-01T11:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_time",
+        "start": 33,
+        "end": 53,
+        "confidence_entity": 0.9959297776222229,
+        "value": "2023-09-01T10:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 57,
+        "end": 77,
+        "confidence_entity": 0.9727684855461121,
+        "value": "2023-09-01T11:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the battery voltage when frame ID is 7 and the time is between 2023-09-01T10:00:00Z and 2023-09-01T11:00:00Z?",
+    "entities": [
+      {
+        "start": 45,
+        "end": 46,
+        "value": "7",
+        "entity": "frame_id"
+      },
+      {
+        "start": 71,
+        "end": 91,
+        "value": "2023-09-01T10:00:00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 96,
+        "end": 116,
+        "value": "2023-09-01T11:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 45,
+        "end": 46,
+        "confidence_entity": 0.8167641162872314,
+        "value": "7",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 71,
+        "end": 91,
+        "confidence_entity": 0.995631217956543,
+        "value": "2023-09-01T10:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 96,
+        "end": 116,
+        "confidence_entity": 0.9671087265014648,
+        "value": "2023-09-01T11:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me the battery charge when battery voltage is 39 and the time is between 2023-08-08T01:49:28.205Z and 2023-08-08T02:49:28:205Z?",
+    "entities": [
+      {
+        "start": 51,
+        "end": 53,
+        "value": "39",
+        "entity": "battery_voltage"
+      },
+      {
+        "start": 78,
+        "end": 102,
+        "value": "2023-08-08T01:49:28.205Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 107,
+        "end": 131,
+        "value": "2023-08-08T02:49:28:205Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 51,
+        "end": 53,
+        "confidence_entity": 0.8143383860588074,
+        "value": "39",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 78,
+        "end": 102,
+        "confidence_entity": 0.9982686042785645,
+        "value": "2023-08-08T01:49:28.205Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 107,
+        "end": 131,
+        "confidence_entity": 0.9925315976142883,
+        "value": "2023-08-08T02:49:28:205Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 78,
+        "end": 102,
+        "value": "2023-08-08T01:49:28.205Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 107,
+        "end": 131,
+        "value": "2023-08-08T02:49:28:205Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I need to know the logic status when the battery charge is -0.18 and the time range is from 2023-09-01T10:00:00Z to 2023-09-01T11:00:00Z?",
+    "entities": [
+      {
+        "start": 59,
+        "end": 64,
+        "value": "-0.18",
+        "entity": "charge_current"
+      },
+      {
+        "start": 92,
+        "end": 112,
+        "value": "2023-09-01T10:00:00Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 116,
+        "end": 136,
+        "value": "2023-09-01T11:00:00Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_charge",
+        "start": 59,
+        "end": 64,
+        "confidence_entity": 0.8789991736412048,
+        "value": "-0.18",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 92,
+        "end": 112,
+        "confidence_entity": 0.9957162737846375,
+        "value": "2023-09-01T10:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 116,
+        "end": 136,
+        "confidence_entity": 0.9713478684425354,
+        "value": "2023-09-01T11:00:00Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the battery voltage when the frame ID is 17 17?",
+    "entities": [
+      {
+        "start": 52,
+        "end": 54,
+        "value": "17",
+        "entity": "frame_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 49,
+        "end": 51,
+        "confidence_entity": 0.7520719766616821,
+        "value": "17",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "frame_id",
+        "start": 52,
+        "end": 54,
+        "confidence_entity": 0.9030619263648987,
+        "value": "17",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me the logic status when battery charge is -0.18 and battery voltage 38.6",
+    "entities": [
+      {
+        "start": 48,
+        "end": 53,
+        "value": "-0.18",
+        "entity": "battery_charge"
+      },
+      {
+        "start": 74,
+        "end": 78,
+        "value": "38.6",
+        "entity": "battery_voltage"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_charge",
+        "start": 48,
+        "end": 53,
+        "confidence_entity": 0.890454888343811,
+        "value": "-0.18",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "battery_voltage",
+        "start": 74,
+        "end": 78,
+        "confidence_entity": 0.7128223180770874,
+        "value": "38.6",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Get data for frame ID 17 and battery voltage of [39.84] (battery_voltage).",
+    "entities": [
+      {
+        "start": 22,
+        "end": 24,
+        "value": "17",
+        "entity": "frame_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 22,
+        "end": 24,
+        "confidence_entity": 0.9469916224479675,
+        "value": "17",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I want the sensor data for current -0.3 and battery voltage of [39.84] (battery_voltage).",
+    "entities": [
+      {
+        "start": 35,
+        "end": 39,
+        "value": "-0.3",
+        "entity": "battery_charge"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_charge",
+        "start": 35,
+        "end": 39,
+        "confidence_entity": 0.8921718001365662,
+        "value": "-0.3",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Show me data when frame ID 17 and battery voltage of [39.84].",
+    "entities": [
+      {
+        "start": 27,
+        "end": 29,
+        "value": "17",
+        "entity": "frame_id"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 27,
+        "end": 29,
+        "confidence_entity": 0.9399254322052002,
+        "value": "17",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the frame ID5 when the battery charge is -18 and logic status is \"DIS\"?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 21,
+        "value": "5",
+        "entity": "frame_id"
+      },
+      {
+        "start": 49,
+        "end": 52,
+        "value": "-18",
+        "entity": "battery_charge"
+      },
+      {
+        "start": 73,
+        "end": 78,
+        "value": "\"DIS\"",
+        "entity": "logic_status"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "battery_charge",
+        "start": 49,
+        "end": 52,
+        "confidence_entity": 0.9362492561340332,
+        "value": "-18",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the battery voltage[battery_voltage] when the frame ID is 5 between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59:602Z?",
+    "entities": [
+      {
+        "start": 66,
+        "end": 67,
+        "value": "5",
+        "entity": "frame_id"
+      },
+      {
+        "start": 76,
+        "end": 100,
+        "value": "2023-08-08T01:49:04.654Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 105,
+        "end": 129,
+        "value": "2023-08-08T07:59:59:602Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "frame_id",
+        "start": 66,
+        "end": 67,
+        "confidence_entity": 0.8394737243652344,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 76,
+        "end": 100,
+        "confidence_entity": 0.9964751601219177,
+        "value": "2023-08-08T01:49:04.654Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 105,
+        "end": 129,
+        "confidence_entity": 0.8815615177154541,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 76,
+        "end": 100,
+        "value": "2023-08-08T01:49:04.654Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 105,
+        "end": 129,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "What is the minimum value of battery voltage between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59:602Z?",
+    "entities": [
+      {
+        "start": 29,
+        "end": 44,
+        "value": "battery voltage",
+        "entity": "field"
+      },
+      {
+        "start": 53,
+        "end": 77,
+        "value": "2023-08-08T01:49:04.654Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 82,
+        "end": 106,
+        "value": "2023-08-08T07:59:59:602Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "field",
+        "start": 29,
+        "end": 44,
+        "confidence_entity": 0.5974153280258179,
+        "value": "voltage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 53,
+        "end": 77,
+        "confidence_entity": 0.9968681931495667,
+        "value": "2023-08-08T01:49:04.654Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 82,
+        "end": 106,
+        "confidence_entity": 0.8783941864967346,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 53,
+        "end": 77,
+        "value": "2023-08-08T01:49:04.654Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 82,
+        "end": 106,
+        "value": "2023-08-08T07:59:59:602Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "minimum battery voltage from 2024-12-09T01:49:28.205Z to 2025-11-18T02:49:28:205Z?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 23,
+        "value": "battery voltage",
+        "entity": "field"
+      },
+      {
+        "start": 29,
+        "end": 53,
+        "value": "2024-12-09T01:49:28.205Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 57,
+        "end": 81,
+        "value": "2025-11-18T02:49:28:205Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "field",
+        "start": 8,
+        "end": 23,
+        "confidence_entity": 0.4978927671909332,
+        "value": "voltage",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 29,
+        "end": 53,
+        "confidence_entity": 0.9985719919204712,
+        "value": "2024-12-09T01:49:28.205Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 57,
+        "end": 81,
+        "confidence_entity": 0.9971274733543396,
+        "value": "2025-11-18T02:49:28:205Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 29,
+        "end": 53,
+        "value": "2024-12-09T01:49:28.205Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 57,
+        "end": 81,
+        "value": "2025-11-18T02:49:28:205Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Can you find the minimum charge current from 2022-06-10T08:59:09.654Z to 2023-05-11T03:59:59:602Z?",
+    "entities": [
+      {
+        "start": 25,
+        "end": 39,
+        "value": "charge current",
+        "entity": "field"
+      },
+      {
+        "start": 45,
+        "end": 69,
+        "value": "2022-06-10T08:59:09.654Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 73,
+        "end": 97,
+        "value": "2023-05-11T03:59:59:602Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "field",
+        "start": 25,
+        "end": 39,
+        "confidence_entity": 0.7072678208351135,
+        "value": "charge current",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 45,
+        "end": 69,
+        "confidence_entity": 0.9973243474960327,
+        "value": "2022-06-10T08:59:09.654Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 73,
+        "end": 97,
+        "confidence_entity": 0.9920386075973511,
+        "value": "2023-05-11T03:59:59:602Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 45,
+        "end": 69,
+        "value": "2022-06-10T08:59:09.654Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 73,
+        "end": 97,
+        "value": "2023-05-11T03:59:59:602Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Tell me the minimum value of logic status between 1997-08-08T01:49:04.654Z and 2000-08-08T07:59:59:602Z.",
+    "entities": [
+      {
+        "start": 29,
+        "end": 41,
+        "value": "logic status",
+        "entity": "field"
+      },
+      {
+        "start": 50,
+        "end": 74,
+        "value": "1997-08-08T01:49:04.654Z",
+        "entity": "start_time"
+      },
+      {
+        "start": 79,
+        "end": 103,
+        "value": "2000-08-08T07:59:59:602Z",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "field",
+        "start": 29,
+        "end": 41,
+        "confidence_entity": 0.9746160507202148,
+        "value": "logic status",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 50,
+        "end": 74,
+        "confidence_entity": 0.9968147873878479,
+        "value": "1997-08-08T01:49:04.654Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 79,
+        "end": 103,
+        "confidence_entity": 0.8793591856956482,
+        "value": "2000-08-08T07:59:59:602Z",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 50,
+        "end": 74,
+        "value": "1997-08-08T01:49:04.654Z",
+        "extractor": "RegexEntityExtractor"
+      },
+      {
+        "entity": "stop_time",
+        "start": 79,
+        "end": 103,
+        "value": "2000-08-08T07:59:59:602Z",
+        "extractor": "RegexEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "Show me the minimum value for frame id from last week to now.",
+    "entities": [
+      {
+        "start": 30,
+        "end": 38,
+        "value": "frame id",
+        "entity": "field"
+      },
+      {
+        "start": 44,
+        "end": 53,
+        "value": "last week",
+        "entity": "start_time"
+      },
+      {
+        "start": 57,
+        "end": 60,
+        "value": "now",
+        "entity": "stop_time"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "field",
+        "start": 30,
+        "end": 38,
+        "confidence_entity": 0.9575290083885193,
+        "value": "frame id",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "start_time",
+        "start": 44,
+        "end": 53,
+        "confidence_entity": 0.9965862035751343,
+        "value": "last week",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "stop_time",
+        "start": 57,
+        "end": 60,
+        "confidence_entity": 0.9873732924461365,
+        "value": "now",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

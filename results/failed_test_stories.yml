@@ -1,0 +1,51 @@
+version: "3.1"
+stories:
+- story: happy path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet  # predicted: action_check_connection
+  - intent: mood_great
+  - action: utter_happy  # predicted: action_listen
+- story: happy path 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet  # predicted: action_check_connection
+  - intent: mood_great
+  - action: utter_happy  # predicted: action_listen
+  - intent: goodbye
+  - action: utter_goodbye  # predicted: action_listen
+- story: sad path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet  # predicted: action_check_connection
+  - intent: mood_unhappy
+  - action: utter_cheer_up  # predicted: action_check_connection
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: affirm
+  - action: utter_happy  # predicted: action_check_connection
+- story: sad path 2 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet  # predicted: action_check_connection
+  - intent: mood_unhappy
+  - action: utter_cheer_up  # predicted: action_check_connection
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny
+  - action: utter_goodbye  # predicted: action_check_connection
+- story: sad path 3 (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet  # predicted: action_check_connection
+  - intent: mood_unhappy
+  - action: utter_cheer_up  # predicted: action_check_connection
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny
+  - action: utter_goodbye  # predicted: action_check_connection
+- story: say goodbye (.\tests\test_stories.yml)
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye  # predicted: action_listen
+- story: bot challenge (.\tests\test_stories.yml)
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot  # predicted: action_check_connection

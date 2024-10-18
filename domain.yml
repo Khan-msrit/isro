@@ -10,18 +10,22 @@ intents:
 - enquire
 - goodbye
 - greet
+- minimum_value_field
 - mood_great
 - mood_unhappy
-
+- query_field_data
 entities:
-- start_time
 - stop_time
+- start_time
+- field
 - battery_voltage
 - battery_charge
 - voltage
 - charge
-
-
+- frame_id
+- logic_status
+- value
+- charge_current
 slots:
   start_time:
     type: text
@@ -35,7 +39,42 @@ slots:
     mappings:
     - type: from_entity
       entity: stop_time
-
+  field:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: field
+  value:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: value
+  battery_voltage:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: battery_voltage
+  battery_charge:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: battery_charge
+  frame_id:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: frame_id
+  logic_status:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: logic_status
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -51,9 +90,11 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
 actions:
+- action_query_min
 - action_calculate_average
 - action_check_connection
 - action_calculate_charge_average
+- action_query_field_based_data
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
