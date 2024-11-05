@@ -35,6 +35,11 @@ stories:
   - intent: check_connection
   - action: action_check_connection
 
+- story: check_query_story
+  steps:
+  - intent: check_query
+  - action: action_query_check
+
 - story: ask_average_charge_current_story
   steps:
   - intent: ask_average_charge_current
@@ -84,3 +89,40 @@ stories:
   - slot_was_set:
     - field: voltage
   - action: action_query_min
+
+- story: interactive_story_2
+  steps:
+  - intent: maximum_value_field
+    entities:
+    - maximum:  maximum
+    - field: voltage
+    - start_time: '2023-08-08T01:49:04.654Z'
+    - stop_time: 2023-08-08T07:59:59:602Z
+    - start_time: '2023-08-08T01:49:04.654Z'
+    - stop_time: 2023-08-08T07:59:59:602Z
+  - slot_was_set:
+    - start_time: '2023-08-08T01:49:04.654Z'
+  - slot_was_set:
+    - stop_time: 2023-08-08T07:59:59:602Z
+  - slot_was_set:
+    - field: voltage
+  - action: action_query_max
+
+- story: interactive_story_3
+  steps:
+  - intent: query_field_condition
+    entities:
+    - target_field: charge
+    - condition_field:  voltage
+    - condition_value: '39.8'
+    - start_time: '2023-08-08T01:49:04.654Z'
+    - stop_time: 2023-08-08T07:59:59:602Z
+    - start_time: '2023-08-08T01:49:04.654Z'
+    - stop_time: 2023-08-08T07:59:59:602Z
+  - slot_was_set:
+    - start_time: '2023-08-08T01:49:04.654Z'
+  - slot_was_set:
+    - stop_time: 2023-08-08T07:59:59:602Z
+  - slot_was_set:
+    - target_field: charge
+  - action: action_query_field_condition

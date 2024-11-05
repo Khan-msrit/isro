@@ -1,0 +1,5 @@
+average
+minimum
+maximum
+check query
+05/11/24:-conditions(what is that when this like that queries)

@@ -1,0 +1,13 @@
+What is the battery voltage when battery charge is -0.18  between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55:342Z?        
+What is the battery charge when battery voltage is 39.84  between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55:342Z?
+What is the battery charge when frame id is 7 between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55:342Z?
+What is the charge when voltage is 39.84 between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55:342Z?
+What is the average charging current between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:29:230Z?
+What is the average battery voltage between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:29:230Z?
+What is the average battery voltage between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59.602Z
+What is the average battery voltage between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55.342Z?
+What is the battery voltage when frame id is 7 between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55.342Z?
+what is he minimum value of battery voltage between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59:602Z
+what is he maximum value of battery voltage between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59:602Z
+2023-08-08T01:49:04.654Z 2023-08-08T07:59:59.602Z 2023-08-08T01:49:55:342Z
+

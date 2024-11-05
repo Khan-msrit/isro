@@ -1,9 +1,0 @@
-{
-  "lookup": {
-    "eJyLrq6NBQAEOAGx": "action_listen",
-    "eJwtytEJgDAMhOFVOoATdBWREOWQYk0ljQUp3d2Avt3H/XMfU+iXohFvlorE0L9Bwidi+JFTNYi3d4V6k8RpfteDuEF5B61sBn2olWzuMZYXq9Ikkg==": "action_query_battery_voltage",
-    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fWJZalJieGp+UWFKSWlQZX5afUwLk1xJncmEpSA+6XtIsigUAED5NxQ==": "action_listen",
-    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2fWJZalJieGp+ckVgEokqLioBytbWxAIWMJBI=": "action_query_battery_voltage",
-    "eJyVjdEJgDAMRFfpAE7gKiIhlqBFTTVNC1Lc3YgOoF93xzvuuno2rm5CBdBriNy6+hhgXKl1b1hCUmLr5kRincAW1XCaAQsJjgR+Qrklixg7vw3vmeSAAVVvLXFRm/r3019mcEzF": "action_listen"
-  }
-}
