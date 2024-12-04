@@ -6,6 +6,7 @@ intents:
 - ask_average_charge_current
 - bot_challenge
 - check_connection
+- check_query
 - deny
 - enquire
 - goodbye
@@ -14,14 +15,17 @@ intents:
 - minimum_value_field
 - mood_great
 - mood_unhappy
-- query_field_data
-- check_query
 - query_field_condition
+- query_field_data
+- query_operators
 entities:
-- stop_time
-- start_time
 - field
+- operator
+- start_time
+- stop_time
+- condition_value
 - maximum
+- minimum
 - battery_voltage
 - battery_charge
 - voltage
@@ -31,8 +35,8 @@ entities:
 - value
 - charge_current
 - condition_field
-- condition_value
 - target_field
+- log_operator
 slots:
   start_time:
     type: text
@@ -82,28 +86,36 @@ slots:
     mappings:
     - type: from_entity
       entity: logic_status
-
   condition_field:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
       entity: condition_field
-
   condition_value:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
       entity: condition_value
-
   target_field:
     type: text
     influence_conversation: false
     mappings:
     - type: from_entity
       entity: target_field
-
+  log_operator:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: log_operator
+  operator:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: operator
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -119,6 +131,7 @@ responses:
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
 actions:
+- action_query_operators
 - action_query_max
 - action_query_min
 - action_calculate_average

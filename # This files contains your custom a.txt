@@ -1,0 +1,388 @@
+# This files contains your custom actions which can be used to run
+# custom Python code.
+#
+# See this guide on how to implement these action:
+# https://rasa.com/docs/rasa/custom-actions
+
+
+# This is a simple example for a custom action which utters "Hello World!"
+
+# from typing import Any, Text, Dict, List
+#
+# from rasa_sdk import Action, Tracker
+# from rasa_sdk.executor import CollectingDispatcher
+#
+#
+# class ActionHelloWorld(Action):
+#
+#     def name(self) -> Text:
+#         return "action_hello_world"
+#
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         dispatcher.utter_message(text="Hello World!")
+#
+#         return []
+
+# from typing import Any, Text, Dict, List
+# from rasa_sdk import Action, Tracker
+# from rasa_sdk.executor import CollectingDispatcher
+# from influxdb_client import InfluxDBClient, QueryApi
+# from datetime import datetime
+
+# # Initialize InfluxDB client (replace with your connection details)
+# INFLUXDB_URL = "http://localhost:8086"
+# INFLUXDB_TOKEN = "kjseorOWtRfYjroWzk2CiPFuOHyjRo3Vrtv0JirIzbPLQTWmqRMSuLCDqmVW5jwr6pBWYVWrQxzM838lRzg1nw=="
+# INFLUXDB_ORG = "msrit"
+# INFLUXDB_BUCKET = "data"
+
+# client = InfluxDBClient(url=INFLUXDB_URL, token=INFLUXDB_TOKEN, org=INFLUXDB_ORG)
+# query_api = client.query_api()
+
+# class ActionQueryBatteryVoltage(Action):
+#     def name(self) -> Text:
+#         return "action_query_battery_voltage"
+
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         sensor_id = tracker.get_slot("sensor_id")
+#         frame_id = tracker.get_slot("frame_id")
+
+#         query = f'''
+#         from(bucket: "{INFLUXDB_BUCKET}")
+#           |> range(start: -30d)
+#           |> filter(fn: (r) => r["_measurement"] == "sensor_data" and r["OBC0T004_FRAME_ID"] == "{frame_id}")
+#           |> filter(fn: (r) => r["_field"] == "PWRS0095_BAT_VOL_FINE_SEL_RT")
+#           |> last()
+#         '''
+#         result = query_api.query(org=INFLUXDB_ORG, query=query)
+
+#         voltage = None
+#         for table in result:
+#             for record in table.records:
+#                 voltage = record.get_value()
+
+#         if voltage:
+#             dispatcher.utter_message(text=f"Battery voltage for sensor {sensor_id} at frame ID {frame_id} is {voltage}V.")
+#         else:
+#             dispatcher.utter_message(text=f"No battery voltage data found for sensor {sensor_id} at frame ID {frame_id}.")
+
+#         return []
+
+# class ActionQuerySensorData(Action):
+#     def name(self) -> Text:
+#         return "action_query_sensor_data"
+
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         sensor_id = tracker.get_slot("sensor_id")
+#         timestamp = tracker.get_slot("timestamp")
+
+#         query = f'''
+#         from(bucket: "{INFLUXDB_BUCKET}")
+#           |> range(start: {timestamp}, stop: {timestamp})
+#           |> filter(fn: (r) => r["_measurement"] == "sensor_data" and r["_time"] == {timestamp})
+#         '''
+#         result = query_api.query(org=INFLUXDB_ORG, query=query)
+
+#         sensor_data = {}
+#         for table in result:
+#             for record in table.records:
+#                 sensor_data[record.get_field()] = record.get_value()
+
+#         if sensor_data:
+#             dispatcher.utter_message(text=f"Sensor data for {sensor_id} at {timestamp}: {sensor_data}")
+#         else:
+#             dispatcher.utter_message(text=f"No sensor data found for {sensor_id} at {timestamp}.")
+
+#         return []
+
+# class ActionQueryLogicStatus(Action):
+#     def name(self) -> Text:
+#         return "action_query_logic_status"
+
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         sensor_id = tracker.get_slot("sensor_id")
+#         timestamp = tracker.get_slot("timestamp")
+
+#         query = f'''
+#         from(bucket: "{INFLUXDB_BUCKET}")
+#           |> range(start: {timestamp}, stop: {timestamp})
+#           |> filter(fn: (r) => r["_measurement"] == "sensor_data" and r["_field"] == "AOE03030_LPD_LOGIC_STS" and r["_time"] == {timestamp})
+#           |> last()
+#         '''
+#         result = query_api.query(org=INFLUXDB_ORG, query=query)
+
+#         logic_status = None
+#         for table in result:
+#             for record in table.records:
+#                 logic_status = record.get_value()
+
+#         if logic_status:
+#             dispatcher.utter_message(text=f"Logic status for sensor {sensor_id} at {timestamp} is {logic_status}.")
+#         else:
+#             dispatcher.utter_message(text=f"No logic status found for sensor {sensor_id} at {timestamp}.")
+
+#         return []
+
+# class ActionQueryAllData(Action):
+#     def name(self) -> Text:
+#         return "action_query_all_data"
+
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#         sensor_id = tracker.get_slot("sensor_id")
+#         frame_id = tracker.get_slot("frame_id")
+
+#         query = f'''
+#         from(bucket: "{INFLUXDB_BUCKET}")
+#           |> range(start: -30d)
+#           |> filter(fn: (r) => r["_measurement"] == "sensor_data" and r["OBC0T004_FRAME_ID"] == "{frame_id}")
+#         '''
+#         result = query_api.query(org=INFLUXDB_ORG, query=query)
+
+#         data = {}
+#         for table in result:
+#             for record in table.records:
+#                 data[record.get_field()] = record.get_value()
+
+#         if data:
+#             dispatcher.utter_message(text=f"All data for sensor {sensor_id} at frame ID {frame_id}: {data}")
+#         else:
+#             dispatcher.utter_message(text=f"No data found for sensor {sensor_id} at frame ID {frame_id}.")
+
+#         return []
+
+
+'''program to check the influxdb connection'''
+
+from influxdb_client import InfluxDBClient
+from influxdb_client.client.query_api import QueryApi
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+from typing import List, Dict, Any
+
+class InfluxDBConfig:
+    """Configuration for InfluxDB connection."""
+    TOKEN = "kjseorOWtRfYjroWzk2CiPFuOHyjRo3Vrtv0JirIzbPLQTWmqRMSuLCDqmVW5jwr6pBWYVWrQxzM838lRzg1nw=="
+    ORG = "msrit"
+    BUCKET = "data"
+    URL = "http://localhost:8086"
+
+    @staticmethod
+    def get_client() -> InfluxDBClient:
+        """Return an InfluxDB client instance."""
+        return InfluxDBClient(
+            url=InfluxDBConfig.URL, 
+            token=InfluxDBConfig.TOKEN, 
+            org=InfluxDBConfig.ORG
+        )
+
+class InfluxDBQueryHelper:
+    """Helper class to perform InfluxDB queries."""
+    
+    @staticmethod
+    def execute_query(query: str) -> List[Dict[str, Any]]:
+        """Execute an InfluxDB query and return the result."""
+        client = InfluxDBConfig.get_client()
+        query_api: QueryApi = client.query_api()
+
+        try:
+            result = query_api.query(org=InfluxDBConfig.ORG, query=query)
+            return result
+        except Exception as e:
+            raise ConnectionError(f"Error executing query: {str(e)}")
+    
+    @staticmethod
+    def format_records(result: List) -> List[Dict[str, Any]]:
+        """Format the query result into a more readable form."""
+        entries = []
+        for table in result:
+            for record in table.records:
+                entry = {
+                    "measurement": record.get_measurement(),
+                    "time": record.get_time(),
+                    "fields": {
+                        record.get_field(): record.get_value()
+                    },
+                    "tags": record.values.get('tags', {})
+                }
+                entries.append(entry)
+        return entries
+
+class ActionCheckConnection(Action):
+    """Action to check the connection to InfluxDB and retrieve a few entries."""
+
+    def name(self) -> str:
+        return "action_check_connection"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]) -> List[Dict[str, Any]]:
+        query = f'from(bucket: "{InfluxDBConfig.BUCKET}") |> range(start: 0) |> limit(n:2)'
+        
+        try:
+            result = InfluxDBQueryHelper.execute_query(query)
+            entries = InfluxDBQueryHelper.format_records(result)
+            
+            if entries:
+                dispatcher.utter_message(text=f"Connection Successful! Retrieved entries: {entries}")
+            else:
+                dispatcher.utter_message(text="No entries found in InfluxDB.")
+        except ConnectionError as e:
+            dispatcher.utter_message(text=str(e))
+        except Exception as e:
+            dispatcher.utter_message(text=f"Unexpected error: {str(e)}")
+        
+        return []
+
+class ActionCalculateAverage(Action):
+    """Action to calculate the average battery voltage between specific timestamps."""
+
+    def name(self) -> str:
+        return "action_calculate_average"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # Define start and stop times for the query
+        start_time = "2023-08-08T01:49:04.654Z"
+        stop_time = "2023-08-08T07:59:59.602Z"
+
+        # InfluxDB query for the specific field and time range
+        query = f'''
+        from(bucket: "{InfluxDBConfig.BUCKET}")
+        |> range(start: {start_time}, stop: {stop_time})
+        |> filter(fn: (r) => r._measurement == "sensor_data" and r._field == "PWRS0095_BAT_VOL_FINE_SEL_RT")
+        |> mean()
+        '''
+
+        try:
+            # Execute the query
+            result = InfluxDBQueryHelper.execute_query(query)
+
+            # Check for valid results
+            if result and result[0].records:
+                average_voltage = result[0].records[0].get_value()
+                dispatcher.utter_message(text=f"The average battery voltage (PWRS0095_BAT_VOL_FINE_SEL_RT) between {start_time} and {stop_time} is {average_voltage} volts.")
+            else:
+                dispatcher.utter_message(text="No voltage data found for the specified time range.")
+        except ConnectionError as e:
+            dispatcher.utter_message(text=f"Connection error: {str(e)}")
+        except Exception as e:
+            dispatcher.utter_message(text=f"Unexpected error: {str(e)}")
+
+        return []
+
+'''working code'''
+
+# class ActionCheckConnection(Action):
+#     """Action to check the connection to InfluxDB and retrieve a few entries."""
+
+#     def name(self) -> str:
+#         return "action_check_connection"
+
+#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]) -> List[Dict[str, Any]]:
+#         query = f'from(bucket: "{InfluxDBConfig.BUCKET}") |> range(start: 0) |> limit(n:2)'
+        
+#         try:
+#             result = InfluxDBQueryHelper.execute_query(query)
+#             entries = InfluxDBQueryHelper.format_records(result)
+            
+#             if entries:
+#                 dispatcher.utter_message(text=f"Connection Successful! Retrieved entries: {entries}")
+#             else:
+#                 dispatcher.utter_message(text="No entries found in InfluxDB.")
+#         except ConnectionError as e:
+#             dispatcher.utter_message(text=str(e))
+#         except Exception as e:
+#             dispatcher.utter_message(text=f"Unexpected error: {str(e)}")
+        
+#         return []
+
+class ActionCalculateAverage(Action):
+    """Action to calculate the average battery voltage between specific timestamps."""
+
+    def name(self) -> str:
+        return "action_calculate_average"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]) -> List[Dict[str, Any]]:
+        # Define start and stop times for the query
+        start_time = "2023-08-08T01:49:04.654Z"
+        stop_time = "2023-08-08T07:59:59.602Z"
+
+        # InfluxDB query for the specific field and time range
+        query = f'''
+        from(bucket: "{InfluxDBConfig.BUCKET}")
+        |> range(start: {start_time}, stop: {stop_time})
+        |> filter(fn: (r) => r._measurement == "sensor_data" and r._field == "PWRS0095_BAT_VOL_FINE_SEL_RT")
+        |> mean()
+        '''
+
+        try:
+            # Execute the query
+            result = InfluxDBQueryHelper.execute_query(query)
+
+            # Check for valid results
+            if result and result[0].records:
+                average_voltage = result[0].records[0].get_value()
+                dispatcher.utter_message(text=f"The average battery voltage (PWRS0095_BAT_VOL_FINE_SEL_RT) between {start_time} and {stop_time} is {average_voltage} volts.")
+            else:
+                dispatcher.utter_message(text="No voltage data found for the specified time range.")
+        except ConnectionError as e:
+            dispatcher.utter_message(text=f"Connection error: {str(e)}")
+        except Exception as e:
+            dispatcher.utter_message(text=f"Unexpected error: {str(e)}")
+
+        return []
+
+
+
+
+       # Print debug information
+        print(f"Start Time: {start_time}, Stop Time: {stop_time}")
+
+What is the average charging current between 2023-08-08T01:49:28:205Z and 2023-08-08T01:49:29:230Z?
+What is the average battery voltage between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:29.230Z?
+What is the average battery voltage between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59.602Z
+What is the average battery voltage between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55.342Z?
+
+What is the battery voltage when frame id is 7 between 2023-08-08T01:49:28.205Z and 2023-08-08T01:49:55.342Z?
+what is he minimum value of battery voltage between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59:602Z
+2023-08-08T01:49:04.654Z 2023-08-08T07:59:59.602Z 2023-08-08T01:49:55:342Z
+
+  |> filter(fn: (r) => r._measurement == "sensor_data")
+  |> filter(fn: (r) => r._field == "PWRS0095_BAT_VOL_FINE_SEL_RT" and r._value == 8)  
+  |> group(columns: ["_time"]) 
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")  
+  |> keep(columns: ["_time", "PWRS0095_BAT_VOL_FINE_SEL_RT", "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT", "OBC0T004_FRAME_ID", "AOE03030_LPD_LOGIC_STS"])
+
+
+#working query
+from(bucket: "data")
+  |> range(start: 0) // Adjust as needed
+  |> filter(fn: (r) => r._measurement == "sensor_data")
+  |> filter(fn: (r) => 
+    (r._field == "PWRS0095_BAT_VOL_FINE_SEL_RT" and r._value == 8) or 
+    (r._field == "OBC0T004_FRAME_ID" and r._value == 5)
+  )
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+  |> filter(fn: (r) => r.PWRS0095_BAT_VOL_FINE_SEL_RT == 8 and r.OBC0T004_FRAME_ID == 5)
+  |> yield(name: "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT")
+
+
+from(bucket: "data")
+  |> range(start: 2023-08-08T01:49:04.654Z, stop: 2023-08-08T07:59:59.602Z)
+  |> filter(fn: (r) => r._measurement == "sensor_data")
+  |> filter(fn: (r) => r._field == "PWRS0095_BAT_VOL_FINE_SEL_RT" or r._field == "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT")
+  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")
+  |> filter(fn: (r) => r.PWRS0095_BAT_VOL_FINE_SEL_RT == 8)
+  |> keep(columns: ["_time", "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT"])
+
+*operator query*
+
+list out all the entries of battery voltage less than 8 between 2023-08-08T01:49:04.654Z and 2023-08-08T07:59:59:602Z
+
+from(bucket: "data")
+    |> range(start: 2023-08-08T01:49:04.654Z, stop: 2023-08-08T07:59:59.602Z)
+    |> filter(fn: (r) => r._measurement == "sensor_data")
+    |> filter(fn: (r) => r._field == "PWRS0095_BAT_VOL_FINE_SEL_RT")
+    |> filter(fn: (r) => r._value == 8)
+    |> keep(columns: ["_time", "_value"])
+    |> rename(columns: {_value: "PWRS0095_BAT_VOL_FINE_SEL_RT"})
+

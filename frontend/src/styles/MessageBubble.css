@@ -1,0 +1,21 @@
+.message-bubble {
+  max-width: 60%;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.message-bubble.bot {
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-start;
+}
+
+.message-bubble.user {
+  background-color: #0078d4;
+  color: white;
+  align-self: flex-end;
+}

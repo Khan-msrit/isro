@@ -88,14 +88,11 @@ nlu:
     - random two entries
     - is influxdb connected?
     - display any two entries from influxDB
-
 - intent: check_query
   examples: |
     - check query
     - is query correct
     - is flux query correct?
-
-
 - intent: ask_average_battery_voltage
   examples: |
     - What is the average battery voltage?
@@ -142,32 +139,6 @@ nlu:
     - Calculate the average voltage from [start time:2023-08-08T01:00.00Z](start_time) to [2023-08-08T02:00:00Z](stop_time).
     - I need the average battery charge from [start time:2023-08-09T00:00.00Z](start_time) to [2023-08-09T06:00:00Z](stop_time).
     - Tell me the average battery charge from [start time:2023-07-15T10:00.00Z](start_time) to [2023-07-15T12:00:00Z](stop_time).
-# - intent: query_field_data
-#   examples: |
-#     - What is the battery voltage(battery_voltage) when frame ID is [5](frame_id)?
-#     - Show me the battery charge(battery_charge) where frame ID is [7](frame_id).
-#     - What is the battery charge when the battery voltage is [39](battery_voltage)?
-#     - Give me the battery charge for battery voltage [42.5](battery_voltage).
-#     - What's the battery charge when the voltage is [40.3](battery_voltage)?
-#     - Show me the charge when the battery voltage is [38.6](battery_voltage).
-#     - What is the logic status when the battery charge is [0.5](battery_charge)?
-#     - Can you tell me the logic status for battery charge [0.9](battery_charge)?
-#     - What is the logic status when the battery charge is [-0.18](battery_charge)?
-#     - What is the battery voltage between [2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T02:49:28:205Z](stop_time)?
-#     - Show me the battery voltage from [2023-09-01T10:00:00Z](start_time) to [2023-09-01T11:00:00Z](stop_time).
-#     - What is the battery charge between [2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T02:49:28:205Z](stop_time)?
-#     - Show me the battery charge from [2023-08-08T01:49:28.205Z](start_time) to [2023-08-08T02:49:28:205Z](stop_time)?
-#     - What is the logic status between [2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T02:49:28:205Z](stop_time)?
-#     - What is the battery voltage when frame ID is [7](frame_id) and the time is between [2023-09-01T10:00:00Z](start_time) and [2023-09-01T11:00:00Z](stop_time)?
-#     - Show me the battery charge when battery voltage is [39](battery_voltage) and the time is between [2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T02:49:28:205Z](stop_time)?
-#     - I need to know the logic status when the battery charge is [-0.18](charge_current) and the time range is from [2023-09-01T10:00:00Z](start_time) to [2023-09-01T11:00:00Z](stop_time)?
-#     - What is the battery voltage when the frame ID is 17 [17](frame_id)?
-#     - Show me the logic status when battery charge is [-0.18](battery_charge) and battery voltage [38.6](battery_voltage)
-#     - Get data for frame ID [17](frame_id) and battery voltage of [39.84] (battery_voltage).
-#     - I want the sensor data for current [-0.3](battery_charge) and battery voltage of [39.84] (battery_voltage).
-#     - Show me data when frame ID [17](frame_id) and battery voltage of [39.84].
-#     - What is the frame ID [5](frame_id) when the battery charge is [-18](battery_charge) and logic status is ["DIS"](logic_status)?
-#     - What is the battery voltage[battery_voltage] when the frame ID is [5](frame_id) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)?
 - intent: minimum_value_field
   examples: |
     - What is the minimum [battery voltage](field) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)?
@@ -191,7 +162,6 @@ nlu:
     - What's the lowest [current](field) from [2018-12-10T11:45:00Z](start_time) to [2019-12-10T11:45:00Z](stop_time)?
     - What’s the minimum [voltage](field) from [last year](start_time) to [this year](stop_time)?
     - Find the lowest [voltage](field) from [yesterday](start_time) to [now](stop_time).
-    - what is he minimum value of [battery voltage]{"entity": "field", "value": "voltage"} between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
     - what is he minimum value of [battery voltage]{"entity": "field", "value": "voltage"} between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
 - intent: maximum_value_field
   examples: |
@@ -217,7 +187,74 @@ nlu:
     - What’s the[maximum](maximum) [voltage](field) from [last year](start_time) to [this year](stop_time)?
     - Find the top [voltage](field) from [yesterday](start_time) to [now](stop_time).
     - what is he [maximum](maximum) value of [battery voltage]{"entity": "field", "value": "voltage"} between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is he [maximum](maximum) value of [battery voltage]{"entity": "field", "value": "voltage"} between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+- intent: query_field_condition
+  examples: |
+    - What is the battery [voltage](field) when [frame id](condition_field) is [7](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]?
+    - what is the battery [voltage]{"entity": "field", "value": "voltage"} when [frame id](condition_field) is [7](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the battery [charge]{"entity": "field", "value": "charge"} when [frame id](condition_field) is [30](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the [logic status](field) when [frame id](condition_field) is [25](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the [frame id](field) when [voltage](condition_field) is [39.8](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the battery [charge]{"entity": "field", "value": "charge"} when [voltage](condition_field) is [8](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the [logic status](field) when [voltage](condition_field) is [8.5](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the [frame id](field) when [charge](condition_field) is [-0.5](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the battery [voltage]{"entity": "field", "value": "voltage"} when [charge](condition_field) is [-0.18](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the [logic status](field) when [charge](condition_field) is [0](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the [frame id](field) when [logic status](condition_field) is ["chrg"](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the battery [voltage]{"entity": "field", "value": "voltage"} when [logic status](condition_field) is ["dis"](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - what is the battery [charge]{"entity": "field", "value": "charge"} when [logic status](condition_field) is ["dis"](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - What is the battery [voltage](field) when [frame id](condition_field) is [7](condition_value) between [2023-08-08T01:49:28.205Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T01:49:55:342Z](stop_time)?
+    - What is the battery [charge](field) when battery [voltage](condition_field) is [39.84](condition_value)  between [2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T01:49:55:342Z](stop_time)?
+    - What is the battery [voltage](field) when battery [charge](condition_field) is [-0.18](condition_value)  between [2023-08-08T01:49:28.205Z](start_time) and [2023-08-08T01:49:55:342Z](stop_time)?        
+
+
+- intent: query_operators
+  examples: |
+    - list out all the entries of battery [voltage](field) [less than](operator) [8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [voltage](field) [<]{"entity": "operator", "value": "less than"} [8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [voltage]{"entity": "field", "value": "voltage"} [less than](operator) [8](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - list out all the entries of battery [voltage]{"entity": "field", "value": "voltage"} [<]{"entity": "operator", "value": "less than"} [8](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
+    - list out all the entries of battery [voltage](field) [equals](operator) [8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [voltage](field) [==]{"entity": "operator", "value": "equals"} [8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [charge](field) [greater than](operator) [-0.18](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of [logic status](field) [equals](operator) ["DIS"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of [frame id](field) [not equals](operator) [30](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [voltage](field) [less than or equal to](operator) [39.8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of [charge](field) [greater than or equal to](operator) [-8.6](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show all entries where battery [voltage](field) [equals](operator) [0](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show entries for [logic status](field) [not equals](operator) ["inactive"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - get all [frame id](field) entries [greater than](operator) ["Chrg"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - fetch all battery [charge](field) records [less than or equal to](operator) [25](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out entries where [voltage](field) [greater than](operator) [15.5](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show entries where [logic status](field) [equals](operator) ["idle"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list all records where [frame id](field) [equals](operator) [5](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59.602Z](stop_time)
+    - retrieve entries for battery [voltage](field) [less than](operator) [-2](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - find entries where [charge](field) [equals](operator) [0](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show records of [logic status](field) [not equals](operator) ["processing"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list records of [voltage](field) [greater than](operator) [-3.4](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - get all [frame id](field) records [less than or equal to](operator) ["45"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [charge](field) [greater than](operator) [-0.18](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [voltage](field) [<]{"entity": "operator", "value": "less than"} [8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [voltage](field) [==]{"entity": "operator", "value": "equals"} [8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [charge](field) [>]{"entity": "operator", "value": "greater than"} [-0.18](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of [logic status](field) [==]{"entity": "operator", "value": "equals"} ["DIS"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of [frame id](field) [!=](operator) [30](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [voltage](field) [<=]{"entity": "operator", "value": "less than or equal to"} [39.8](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of [charge](field) [>=]{"entity": "operator", "value": "greater than or equal to"} [-8.6](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show all entries where battery [voltage](field) [==]{"entity": "operator", "value": "equals"} [0](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show entries for [logic status](field) [!=](operator) ["inactive"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - get all [frame id](field) entries [>]{"entity": "operator", "value": "greater than"} ["Chrg"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - fetch all battery [charge](field) records [<=]{"entity": "operator", "value": "less than or equal to"} [25](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out entries where [voltage](field) [>]{"entity": "operator", "value": "greater than"} [15.5](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show entries where [logic status](field) [==]{"entity": "operator", "value": "equals"} ["idle"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list all records where [frame id](field) [==]{"entity": "operator", "value": "equals"} [5](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59.602Z](stop_time)
+    - retrieve entries for battery [voltage](field) [<]{"entity": "operator", "value": "less than"} [-2](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - find entries where [charge](field) [==]{"entity": "operator", "value": "equals"} [0](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - show records of [logic status](field) [!=](operator) ["processing"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list records of [voltage](field) [>]{"entity": "operator", "value": "greater than"} [-3.4](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - get all [frame id](field) records [<=]{"entity": "operator", "value": "less than or equal to"} ["45"](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+    - list out all the entries of battery [charge](field) [>]{"entity": "operator", "value": "greater than"} [-0.18](condition_value) between [2023-08-08T01:49:04.654Z](start_time) and [2023-08-08T07:59:59:602Z](stop_time)
+
+
 - synonym: voltage
   examples: |
     - battery voltage
@@ -238,19 +275,3 @@ nlu:
 - regex: stop_time
   examples: |
     - [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\:[0-9]{3}Z
-
-- intent: query_field_condition
-  examples: |
-    - What is the [battery voltage](field) when [frame id](condition_field) is [7](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]?
-    - what is the [battery voltage]{"entity": "field", "value": "voltage"} when [frame id](condition_field) is [7](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [battery charge]{"entity": "field", "value": "charge"} when [frame id](condition_field) is [30](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [logic status]{"entity": "field", "value": "logic status"} when [frame id](condition_field) is [25](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [frame id]{"entity": "field", "value": "frame id"} when [voltage](condition_field) is [39.8](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [battery charge]{"entity": "field", "value": "charge"} when [voltage](condition_field) is [8](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [logic status]{"entity": "field", "value": "logic status"} when [voltage](condition_field) is [8.5](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [frame id]{"entity": "field", "value": "frame id"} when [charge](condition_field) is [-0.5](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [battery voltage]{"entity": "field", "value": "voltage"} when [charge](condition_field) is [-0.18](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [logic status]{"entity": "field", "value": "logic status"} when [charge](condition_field) is [0](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [frame id]{"entity": "field", "value": "frame id"} when [logic status](condition_field) is ["chrg"](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [battery voltage]{"entity": "field", "value": "voltage"} when [logic status](condition_field) is ["dis"](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]
-    - what is the [battery charge]{"entity": "field", "value": "charge"} when [logic status](condition_field) is ["dis"](condition_value) between [2023-08-08T01:49:04.654Z][{"entity": "start_time"}, {"entity": "start_time"}] and [2023-08-08T07:59:59:602Z][{"entity": "stop_time"}, {"entity": "stop_time"}]

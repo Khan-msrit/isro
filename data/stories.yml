@@ -126,3 +126,26 @@ stories:
   - slot_was_set:
     - target_field: charge
   - action: action_query_field_condition
+
+- story: interactive_story_4
+  steps:
+  - intent: query_operators
+    entities:
+    - field: voltage
+    - operator: less than
+    - condition_value: '8'
+    - start_time: '2023-08-08T01:49:04.654Z'
+    - stop_time: 2023-08-08T07:59:59:602Z
+    - start_time: '2023-08-08T01:49:04.654Z'
+    - stop_time: 2023-08-08T07:59:59:602Z
+  - slot_was_set:
+    - start_time: '2023-08-08T01:49:04.654Z'
+  - slot_was_set:
+    - stop_time: 2023-08-08T07:59:59:602Z
+  - slot_was_set:
+    - field: voltage
+  - slot_was_set:
+    - condition_value: '8'
+  - slot_was_set:
+    - operator: less than
+  - action: action_query_operators

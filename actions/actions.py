@@ -760,7 +760,119 @@ class ActionQueryFieldCondition(Action):
 
         return "\n".join(output_lines)
 
+class ActionOperators(Action):
+    """Action to query the operators value of various sensor data fields within a specified time range.""" 
+    
+    # Dictionary to map user-friendly terms to InfluxDB field names
+    field_mapping = {
+        "voltage": "PWRS0095_BAT_VOL_FINE_SEL_RT",
+        "charge": "PWRS0089_BAT_CHRG_CUR_TCR_SEL_RT",
+        "logic status": "AOE03030_LPD_LOGIC_STS",
+        "frame id": "OBC0T004_FRAME_ID"
+    }
+    operator_mapping = {
+        "equals": "==",
+        "not equals": "!=",
+        "greater than": ">",
+        "less than": "<",
+        "greater than or equal to": ">=",
+        "less than or equal to": "<="
+    }
+    # log_operator_mapping = {
+    #     "and": "AND",
+    #     "or":"OR"
+    # }
 
+    def name(self) -> str:
+        return "action_query_operators"
+    
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]) -> List[Dict[str, Any]]:
+
+        # Get start, stop times, and field from user input through tracker
+        start_time = tracker.get_slot("start_time")
+        stop_time = tracker.get_slot("stop_time")
+        field = tracker.get_slot("field")
+        # log_operator = tracker.get_slot("log_operator")
+        operator = tracker.get_slot("operator")
+        condition_value = tracker.get_slot("condition_value")
+
+        
+        if not start_time or not stop_time or not field:
+            dispatcher.utter_message(text="Please provide start time, stop time, and the field.")
+            return []
+
+        # Print debug information for raw input
+        print(f"Raw Start Time: {start_time}, Raw Stop Time: {stop_time}, Field: {field}")
+
+        # Map user-friendly field name to InfluxDB field name
+        influxdb_field = self.field_mapping.get(field.lower())
+        # influxdb_log_operator = self.log_operator_mapping.get(field.lower())
+        influxdb_operator = self.operator_mapping.get(operator.lower())
+
+        if influxdb_field is None:
+            dispatcher.utter_message(text=f"Sorry, I don't recognize the field '{field}'. Please provide a valid field.")
+            return []
+        
+        # if influxdb_log_operator is None:
+        #     dispatcher.utter_message(text=f"Sorry, I don't recognize the logical operator '{log_operator}'. Please provide a valid logical operator.")
+        #     return []
+        
+        if influxdb_operator is None:
+            dispatcher.utter_message(text=f"Sorry, I don't recognize the operator '{operator}'. Please provide a valid operator.")
+            return []
+
+        # Normalize the time format before using in the query
+        try:
+            normalized_start_time = normalize_time_format(start_time)
+            normalized_stop_time = normalize_time_format(stop_time)
+        except ValueError as e:
+            dispatcher.utter_message(text=str(e))
+            return []
+
+        # Print debug information for normalized time and field
+        print(f"Normalized Start Time: {normalized_start_time}, Normalized Stop Time: {normalized_stop_time}, Field: {influxdb_field}, operator: {influxdb_operator}")
+
+        # Format the condition value for the query
+        if isinstance(condition_value, str) and field.lower() == "logic status":
+            condition_value = f'"{condition_value}"'  # For string values, use double quotes
+
+        # InfluxDB query for the specific field and time range, with normalized times
+        query = f'''
+        from(bucket: "{InfluxDBConfig.BUCKET}")
+        |> range(start: {normalized_start_time}, stop: {normalized_stop_time})
+        |> filter(fn: (r) => r._measurement == "sensor_data")
+        |> filter(fn: (r) => r._field == "{influxdb_field}")
+        |> filter(fn: (r) => r._value {influxdb_operator} {condition_value})
+        |> keep(columns: ["_time", "_value"])
+        '''
+
+        print(f"Constructed Query: {query}")
+
+        try:
+            # Execute the query
+            result = InfluxDBQueryHelper.execute_query(query)
+
+            # Check for valid results
+            if result and result[0].records:
+                table_data = []
+                for record in result[0].records:
+                    row = {
+                        "timestamp": record.get_time(),
+                        "value": record.get_value()
+                    }
+                    table_data.append(row)
+                table_display = "Timestamp\t\tValue\n"
+                for row in table_data:
+                    table_display += f"{row['timestamp']}\t{row['value']}\n"  # Format each row as "timestamp\tvalue"
+                dispatcher.utter_message(text=f"The values for {field} between {normalized_start_time} and {normalized_stop_time} are:\n{table_display}")
+            else:
+                dispatcher.utter_message(text=f"No data found for {field} in the specified time range.")
+        except ConnectionError as e:
+            dispatcher.utter_message(text=f"Connection error: {str(e)}")
+        except Exception as e:
+            dispatcher.utter_message(text=f"Unexpected error: {str(e)}")
+
+        return []
 
     # def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[str, Any]) -> List[Dict[str, Any]]:
     #     # Define the InfluxDB query
