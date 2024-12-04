@@ -19,3 +19,10 @@
   color: white;
   align-self: flex-end;
 }
+.message-bubble .timestamp {
+  display: block;
+  font-size: 10px;
+  color: #888;
+  margin-top: 5px;
+  text-align: right;
+}
