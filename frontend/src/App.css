@@ -77,3 +77,17 @@ html, body {
   height: 100%;
   overflow-y: auto;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+img {
+  margin-top: 20px;
+  border-radius: 5px;
+}

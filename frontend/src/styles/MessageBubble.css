@@ -26,3 +26,156 @@
   margin-top: 5px;
   text-align: right;
 }
+.graph-container {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+.graph-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.graph-container:hover {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.table-container {
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+.table-container {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+.graph-container {
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.enlarge-tip {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.close-modal {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: #005a9e;
+}
+@media (max-width: 768px) {
+  .graph-container {
+      width: 100%;
+      padding: 5px;
+  }
+
+  .table-container {
+      font-size: 12px; /* Reduce table font size for smaller screens */
+  }
+
+  .close-modal {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+}
